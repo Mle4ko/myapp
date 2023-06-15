@@ -1,0 +1,11 @@
+replicaCount: 1
+image:
+  repository: nginx
+  tag: stable
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+  nodePort: 30000
+  name: nginx-app
+deployment:
+  name: nginx-app
